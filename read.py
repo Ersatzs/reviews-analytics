@@ -4,5 +4,11 @@ with open('reviews.txt' , 'r') as f:
 	for line in f:
 		data.append(line)
 		count += 1
-		if count % 1000 == 0:
+		if count % 10000 == 0:
 			print(len(data))
+print('资料读取完毕，一共有:', len(data), '条信息')
+
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d)
+print('信息平均长度为:' , sum_len/len(data))
