@@ -12,3 +12,9 @@ sum_len = 0
 for d in data:
 	sum_len = sum_len + len(d)
 print('信息平均长度为:' , sum_len/len(data))
+
+new = []
+for d in data:
+	if len(d) > 150:
+		new.append(d)
+print('大于150字符长度的留言有' , len(new) , '条')
